@@ -1,7 +1,6 @@
 package nl.novi.relaties.extra;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
 
