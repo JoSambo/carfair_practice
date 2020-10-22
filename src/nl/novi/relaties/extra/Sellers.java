@@ -9,14 +9,14 @@ public class Sellers {
     private int telephoneNumber;
     private String website;
     final String VAT_NUMBER;
-    private List<String> carToSell;
+    private List<Cars> carToSell;
 
     public Sellers(String companyName, int telephoneNumber, String website, String VAT_NUMBER) {
         this.companyName = companyName;
         this.telephoneNumber = telephoneNumber;
         this.website = website;
         this.VAT_NUMBER = VAT_NUMBER;
-        this.carToSell = new ArrayList<>();
+        carToSell = new ArrayList<>();
     }
 
     public String getCompanyName() {
@@ -47,22 +47,27 @@ public class Sellers {
         return VAT_NUMBER;
     }
 
-    public List<String> getCarToSell() {
+    public List<Cars> getCarToSell() {
         return carToSell;
     }
 
-    public void setCarToSell(List<String> carToSell) {
+    public void setCarToSell(List<Cars> carToSell) {
         this.carToSell = carToSell;
     }
 
-    public void addCarToSell(List<String> cars) {
-        for (String car : cars) {
-            carToSell.add(car);
-        }
+    public void addCarToSell(Cars car) {
+        carToSell.add(car);
     }
+//    public void addCarToSell(List<Cars> cars) {
+//        for (Cars car : cars) {
+//            carToSell.add(car);
+//        }
+//    }
 
     @Override
     public String toString() {
-        return "Verkoper " + this.getCompanyName() + " heeft de volgende auto's te koop: " + this.getCarToSell();
+        return "Verkoper " + "'" + companyName + "'" + " heeft de volgende auto's te koop: " + carToSell;
     }
+
+
 }

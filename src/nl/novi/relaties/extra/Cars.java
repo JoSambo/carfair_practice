@@ -84,4 +84,9 @@ public class Cars {
     public double sellPriceVatInclusive(double sellingPriceExVAT) {
         return sellingPriceExVAT + sellingPriceExVAT * 0.21;
     }
+
+    @Override
+    public String toString() {
+        return brand;
+    }
 }
